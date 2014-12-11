@@ -31,7 +31,7 @@ public class ReturnTypeTest {
 	}
 
 	@Test
-	public void checkByteOutsideInBounds() throws Exception {
+	public void checkByteInBounds() throws Exception {
 		// Arrange
 		final ReturnType rt = new ReturnType();
 

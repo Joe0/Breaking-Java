@@ -28,7 +28,67 @@ public class ReturnTypeCreator implements Creator, Opcodes {
 			mv.visitEnd();
 		}
 		{
-			mv = cw.visitMethod(ACC_PUBLIC, "returnInt", "(I)B", null, null);
+			mv = cw.visitMethod(ACC_PUBLIC, "returnByteThatIsInt", "(I)B", null, null);
+			mv.visitCode();
+			Label l0 = new Label();
+			mv.visitLabel(l0);
+			mv.visitLineNumber(5, l0);
+			mv.visitVarInsn(ILOAD, 1);
+			mv.visitInsn(IRETURN);
+			Label l1 = new Label();
+			mv.visitLabel(l1);
+			mv.visitLocalVariable("this", "Lcom/joepritzel/breakingj/ReturnType;", null, l0, l1, 0);
+			mv.visitLocalVariable("i", "I", null, l0, l1, 1);
+			mv.visitMaxs(1, 2);
+			mv.visitEnd();
+		}
+		{
+			mv = cw.visitMethod(ACC_PUBLIC, "returnCharThatIsInt", "(I)C", null, null);
+			mv.visitCode();
+			Label l0 = new Label();
+			mv.visitLabel(l0);
+			mv.visitLineNumber(5, l0);
+			mv.visitVarInsn(ILOAD, 1);
+			mv.visitInsn(IRETURN);
+			Label l1 = new Label();
+			mv.visitLabel(l1);
+			mv.visitLocalVariable("this", "Lcom/joepritzel/breakingj/ReturnType;", null, l0, l1, 0);
+			mv.visitLocalVariable("i", "I", null, l0, l1, 1);
+			mv.visitMaxs(1, 2);
+			mv.visitEnd();
+		}
+		{
+			mv = cw.visitMethod(ACC_PUBLIC, "returnShortThatIsInt", "(I)S", null, null);
+			mv.visitCode();
+			Label l0 = new Label();
+			mv.visitLabel(l0);
+			mv.visitLineNumber(5, l0);
+			mv.visitVarInsn(ILOAD, 1);
+			mv.visitInsn(IRETURN);
+			Label l1 = new Label();
+			mv.visitLabel(l1);
+			mv.visitLocalVariable("this", "Lcom/joepritzel/breakingj/ReturnType;", null, l0, l1, 0);
+			mv.visitLocalVariable("i", "I", null, l0, l1, 1);
+			mv.visitMaxs(1, 2);
+			mv.visitEnd();
+		}
+		{
+			mv = cw.visitMethod(ACC_PUBLIC, "returnBooleanThatIsInt", "(I)Z", null, null);
+			mv.visitCode();
+			Label l0 = new Label();
+			mv.visitLabel(l0);
+			mv.visitLineNumber(5, l0);
+			mv.visitVarInsn(ILOAD, 1);
+			mv.visitInsn(IRETURN);
+			Label l1 = new Label();
+			mv.visitLabel(l1);
+			mv.visitLocalVariable("this", "Lcom/joepritzel/breakingj/ReturnType;", null, l0, l1, 0);
+			mv.visitLocalVariable("i", "I", null, l0, l1, 1);
+			mv.visitMaxs(1, 2);
+			mv.visitEnd();
+		}
+		{
+			mv = cw.visitMethod(ACC_PUBLIC, "returnIntFromBoolean", "(Z)I", null, null);
 			mv.visitCode();
 			Label l0 = new Label();
 			mv.visitLabel(l0);
